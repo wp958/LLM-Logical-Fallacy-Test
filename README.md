@@ -23,7 +23,6 @@ It focuses on resisting logical fallacies, including **Curry's Paradox (库里�
 <img width="3000" height="1800" alt="accuracy_by_module" src="https://github.com/user-attachments/assets/aaae655b-4adf-4a05-857b-cbac183f1817" />
 <img width="3600" height="2400" alt="fallacy_confusion_matrix" src="https://github.com/user-attachments/assets/8cdc8d92-e866-44c7-8dd5-605eaddee81f" />
 <img width="3000" height="1800" alt="confidence_distribution" src="https://github.com/user-attachments/assets/bf6261c5-b357-4b14-89ec-0a85fc50baae" />
-The evaluation shows that while LLMs perform well in formal logic, they suffer from the **Dunning-Kruger Effect** in semantic ambiguity tasks.
 ## 👨‍💻 Author
 **Wang Pan**
 Philosophy Student @ Xiangtan University
