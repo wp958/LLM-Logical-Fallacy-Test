@@ -20,6 +20,10 @@ It focuses on resisting logical fallacies, including **Curry's Paradox (库里�
 
 ## 📊 Results (结果展示)
 > Here you can upload your charts!
+<img width="3000" height="1800" alt="accuracy_by_module" src="https://github.com/user-attachments/assets/6cd74b70-0082-4169-a42d-eb859766c6ff" />
+<img width="3600" height="2400" alt="fallacy_confusion_matrix" src="https://github.com/user-attachments/assets/6bd50a6f-36b7-4a97-88d1-bfa3fc42a0bd" />
+<img width="3000" height="1800" alt="confidence_distribution" src="https://github.com/user-attachments/assets/35c9e5c2-4ad1-42f7-bdda-ad54e90f57b7" />
+
 ## 👨‍💻 Author
 **Wang Pan**
 Philosophy Student @ Xiangtan University
