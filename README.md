@@ -1,6 +1,6 @@
 # 🤖 大语言模型能抵抗逻辑谬误吗？——基于 Python 的批量化测试与统计分析
 > **LLM Evaluation Project**: Can Large Language Models Resist Logical Fallacies?
-> **作者**：王潘 | **专业**：哲学（AI伦理与逻辑评测方向）
+> **作者**：王潘 | **专业**：哲学
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![API](https://img.shields.io/badge/API-Spark_X1-orange.svg)
@@ -23,21 +23,21 @@
 ### 1. 模块准确率分层：完美的“形式”，脆弱的“语义”
 > 实验表明，模型在基础形式逻辑（模块1）和概率认知陷阱（模块4）上表现出 100% 的准确率，但在需要深层语境和概念理解的“语义模块（模块2）”上，准确率降至 77.8%。它擅长处理“形式”，却难以把握“内容”。
 
-**【👇请在这里按回车，拖入你的“图 1：分模块准确率”👇】**
+
 <img width="3000" height="1800" alt="accuracy_by_module" src="https://github.com/user-attachments/assets/4cc83eb8-2db9-4883-8b7c-7284b19c3ad2" />
 
 
 ### 2. 诊断能力矩阵：模型知道错在哪里吗？
 > 混淆矩阵显示，模型内部已形成有效的谬误诊断机制。它不仅能判断有效性，还能在绝大多数情况下精准归类谬误类型（如区分“肯定后件”与“否定前件”），唯一的混淆发生在语义复杂的“模态谬误”中。
 
-**【👇请在这里按回车，拖入你的“图 2：谬误类型识别混淆矩阵”👇】**
+
 <img width="3600" height="2400" alt="fallacy_confusion_matrix" src="https://github.com/user-attachments/assets/73dc85e4-e9a0-4b9c-8bf2-d685f628bf2b" />
 
 
 ### 3. 最危险的发现：高自信的“幻觉”（The Confidence Gap）
 > 这是本项目最核心的发现。对于错误的判断（左侧箱体），模型的自信度中位数依然高达 0.95。这意味着它“不知道自己不知道”。一个在 99% 情况下可靠的模型，在 1% 的错误上表现得理直气壮，这在实际应用中是巨大的安全隐患。
 
-**【👇请在这里按回车，拖入你的“图 3：自信程度分布箱线图”👇】**
+
 <img width="3000" height="1800" alt="confidence_distribution" src="https://github.com/user-attachments/assets/a04b4a11-4995-472a-a06c-f71ca2ba9a0b" />
 
 
