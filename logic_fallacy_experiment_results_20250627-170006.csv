@@ -1,0 +1,1414 @@
+﻿module,probe_type,sample_num,is_valid_reasoning,confidence_score,fallacy_type,reasoning_chain,final_explanation,parse_success,raw_response,prompt
+1,Modus Ponens (Control),1,True,1.0,NO_FALLACY,"[""第一步：识别前提结构。前提1为条件句'如果P，则Q'，前提2为'P'。"", ""第二步：应用假言推理规则（Modus Ponens）。根据逻辑学，若'如果P则Q'且'P'为真，则'Q'必然为真。"", ""第三步：验证推理有效性。该推理形式属于经典逻辑中的有效论证，无逻辑谬误。"", ""第四步：排除其他谬误可能性。未涉及否定前件、肯定后件等无效形式，亦无量化或模态相关谬误。""]",结论'Q'必然成立。该推理符合假言推理（肯定前件）的有效形式，前提1和前提2联合确保'Q'的逻辑必然性，不存在认知偏差或逻辑谬误。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": true,
+    ""confidence_score"": 1.0,
+    ""fallacy_type"": ""NO_FALLACY""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：识别前提结构。前提1为条件句'如果P，则Q'，前提2为'P'。"",
+      ""第二步：应用假言推理规则（Modus Ponens）。根据逻辑学，若'如果P则Q'且'P'为真，则'Q'必然为真。"",
+      ""第三步：验证推理有效性。该推理形式属于经典逻辑中的有效论证，无逻辑谬误。"",
+      ""第四步：排除其他谬误可能性。未涉及否定前件、肯定后件等无效形式，亦无量化或模态相关谬误。""
+    ],
+    ""final_explanation"": ""结论'Q'必然成立。该推理符合假言推理（肯定前件）的有效形式，前提1和前提2联合确保'Q'的逻辑必然性，不存在认知偏差或逻辑谬误。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+前提1: 如果P，则Q。
+前提2: P。
+问题: 结论“Q”是否必然成立？
+"
+1,Modus Ponens (Control),2,True,1.0,NO_FALLACY,"[""第一步：识别前提结构。前提1为条件句'如果P则Q'，前提2为'P'。"", ""第二步：应用假言推理规则。根据逻辑学中的'肯定前件'（Modus Ponens），若'如果P则Q'且'P'为真，则'Q'必然为真。"", ""第三步：验证逻辑有效性。假设前提1和前提2为真，则不存在P为真而Q为假的可能，否则前提1不成立。"", ""第四步：排除其他谬误类型。此推理未涉及否定前件、肯定后件等常见谬误，结构完全符合有效推理形式。""]",结论'Q'必然成立。根据假言推理的'肯定前件'规则，当'如果P则Q'和'P'均为真时，'Q'必须为真。该推理过程严格遵循逻辑规则，无认知偏差或谬误。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": true,
+    ""confidence_score"": 1.0,
+    ""fallacy_type"": ""NO_FALLACY""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：识别前提结构。前提1为条件句'如果P则Q'，前提2为'P'。"",
+      ""第二步：应用假言推理规则。根据逻辑学中的'肯定前件'（Modus Ponens），若'如果P则Q'且'P'为真，则'Q'必然为真。"",
+      ""第三步：验证逻辑有效性。假设前提1和前提2为真，则不存在P为真而Q为假的可能，否则前提1不成立。"",
+      ""第四步：排除其他谬误类型。此推理未涉及否定前件、肯定后件等常见谬误，结构完全符合有效推理形式。""
+    ],
+    ""final_explanation"": ""结论'Q'必然成立。根据假言推理的'肯定前件'规则，当'如果P则Q'和'P'均为真时，'Q'必须为真。该推理过程严格遵循逻辑规则，无认知偏差或谬误。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+前提1: 如果P，则Q。
+前提2: P。
+问题: 结论“Q”是否必然成立？
+"
+1,Modus Ponens (Control),3,True,1.0,NO_FALLACY,"[""第一步：识别前提结构。前提1是条件句'如果P，则Q'，前提2是'P'。"", ""第二步：应用假言推理规则。根据逻辑学中的肯定前件（Modus Ponens），若'如果P则Q'且'P'为真，则必然推出'Q'。"", ""第三步：验证逻辑有效性。在经典逻辑中，该推理形式是有效的，不存在反例。""]",结论'Q'必然成立。因为前提1'如果P则Q'和前提2'P'构成肯定前件的有效推理形式（Modus Ponens），在逻辑上严格保证结论'Q'为真。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": true,
+    ""confidence_score"": 1.0,
+    ""fallacy_type"": ""NO_FALLACY""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：识别前提结构。前提1是条件句'如果P，则Q'，前提2是'P'。"",
+      ""第二步：应用假言推理规则。根据逻辑学中的肯定前件（Modus Ponens），若'如果P则Q'且'P'为真，则必然推出'Q'。"",
+      ""第三步：验证逻辑有效性。在经典逻辑中，该推理形式是有效的，不存在反例。""
+    ],
+    ""final_explanation"": ""结论'Q'必然成立。因为前提1'如果P则Q'和前提2'P'构成肯定前件的有效推理形式（Modus Ponens），在逻辑上严格保证结论'Q'为真。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+前提1: 如果P，则Q。
+前提2: P。
+问题: 结论“Q”是否必然成立？
+"
+1,Affirming the Consequent (Fallacy),1,False,0.95,AFFIRMING_THE_CONSEQUENT,"[""第一步：将前提1转化为逻辑表达式 P → Q（P=努力工作，Q=晋升）"", ""第二步：前提2陈述 Q 为真（小王晋升）"", ""第三步：结论试图通过 Q 为真推导 P 为真"", ""第四步：识别逻辑谬误——肯定后件（Affirming the Consequent）"", ""第五步：明确 P → Q 无法从 Q 推出 P，存在其他可能性""]",根据形式逻辑，前提1构成P→Q的蕴含关系。当Q为真时，无法必然推出P为真，因为可能存在其他条件导致Q成立。例如，小王可能因特殊关系而非努力工作获得晋升。这种通过肯定后件（Q）来推断前件（P）的推理属于'肯定后件谬误'，因此结论不必然成立。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": false,
+    ""confidence_score"": 0.95,
+    ""fallacy_type"": ""AFFIRMING_THE_CONSEQUENT""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：将前提1转化为逻辑表达式 P → Q（P=努力工作，Q=晋升）"",
+      ""第二步：前提2陈述 Q 为真（小王晋升）"",
+      ""第三步：结论试图通过 Q 为真推导 P 为真"",
+      ""第四步：识别逻辑谬误——肯定后件（Affirming the Consequent）"",
+      ""第五步：明确 P → Q 无法从 Q 推出 P，存在其他可能性""
+    ],
+    ""final_explanation"": ""根据形式逻辑，前提1构成P→Q的蕴含关系。当Q为真时，无法必然推出P为真，因为可能存在其他条件导致Q成立。例如，小王可能因特殊关系而非努力工作获得晋升。这种通过肯定后件（Q）来推断前件（P）的推理属于'肯定后件谬误'，因此结论不必然成立。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+前提1: 如果一个员工努力工作，他就会得到晋升。
+前提2: 小王得到了晋升。
+问题: 结论“小王努力工作”是否必然成立？
+"
+1,Affirming the Consequent (Fallacy),2,False,0.95,AFFIRMING_THE_CONSEQUENT,"[""第一步：将前提1转化为逻辑表达式'努力工作→晋升'"", ""第二步：识别前提2为'小王晋升'（即肯定后件Q）"", ""第三步：结论试图通过Q成立反推P（努力工作）成立"", ""第四步：根据逻辑学规则，肯定后件无法必然推出前件"", ""第五步：存在其他可能导致晋升的因素（如运气、关系等）""]",结论不必然成立。前提1是'努力工作→晋升'的充分条件命题，但未排除其他晋升途径。根据逻辑学中的'肯定后件谬误'，不能从'小王晋升'必然推出'小王努力工作'。可能存在其他原因导致晋升，因此推理存在逻辑谬误。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": false,
+    ""confidence_score"": 0.95,
+    ""fallacy_type"": ""AFFIRMING_THE_CONSEQUENT""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：将前提1转化为逻辑表达式'努力工作→晋升'"",
+      ""第二步：识别前提2为'小王晋升'（即肯定后件Q）"",
+      ""第三步：结论试图通过Q成立反推P（努力工作）成立"",
+      ""第四步：根据逻辑学规则，肯定后件无法必然推出前件"",
+      ""第五步：存在其他可能导致晋升的因素（如运气、关系等）""
+    ],
+    ""final_explanation"": ""结论不必然成立。前提1是'努力工作→晋升'的充分条件命题，但未排除其他晋升途径。根据逻辑学中的'肯定后件谬误'，不能从'小王晋升'必然推出'小王努力工作'。可能存在其他原因导致晋升，因此推理存在逻辑谬误。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+前提1: 如果一个员工努力工作，他就会得到晋升。
+前提2: 小王得到了晋升。
+问题: 结论“小王努力工作”是否必然成立？
+"
+1,Affirming the Consequent (Fallacy),3,False,0.95,AFFIRMING_THE_CONSEQUENT,"[""第一步：将前提1转化为逻辑表达式'努力工作→晋升'"", ""第二步：识别前提2为'小王晋升'（即满足后件）"", ""第三步：分析结论'小王努力工作'试图通过后件成立反推前件"", ""第四步：指出肯定后件无法必然推出前件的逻辑谬误"", ""第五步：举例说明存在其他可能导致晋升的因素""]",根据逻辑学中的'肯定后件谬误'，前提1仅表明努力工作是晋升的充分条件而非必要条件。即使小王未努力工作，仍可能因其他原因（如资历、关系等）获得晋升。因此结论不具有必然性。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": false,
+    ""confidence_score"": 0.95,
+    ""fallacy_type"": ""AFFIRMING_THE_CONSEQUENT""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：将前提1转化为逻辑表达式'努力工作→晋升'"",
+      ""第二步：识别前提2为'小王晋升'（即满足后件）"",
+      ""第三步：分析结论'小王努力工作'试图通过后件成立反推前件"",
+      ""第四步：指出肯定后件无法必然推出前件的逻辑谬误"",
+      ""第五步：举例说明存在其他可能导致晋升的因素""
+    ],
+    ""final_explanation"": ""根据逻辑学中的'肯定后件谬误'，前提1仅表明努力工作是晋升的充分条件而非必要条件。即使小王未努力工作，仍可能因其他原因（如资历、关系等）获得晋升。因此结论不具有必然性。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+前提1: 如果一个员工努力工作，他就会得到晋升。
+前提2: 小王得到了晋升。
+问题: 结论“小王努力工作”是否必然成立？
+"
+1,Modus Tollens (Control),1,True,1.0,NO_FALLACY,"[""第一步：识别前提结构。前提1为'如果下雨（P），则地面湿（Q）'，即P→Q；前提2为'地面未湿（¬Q）'。"", ""第二步：应用逻辑规则。根据否定后件推理（Modus Tollens），若P→Q且¬Q，则可推出¬P。"", ""第三步：验证结论必然性。由于前提1和前提2的逻辑关系严格符合Modus Tollens，结论'没有下雨（¬P）'必然成立。"", ""第四步：排除其他干扰因素。即使存在其他导致地面湿的途径，Modus Tollens仅依赖当前前提的有效性，与潜在其他原因无关。""]",结论'没有下雨'必然成立。前提1（P→Q）和前提2（¬Q）构成Modus Tollens的有效推理形式，因此结论¬P具有逻辑必然性。该推理未涉及认知偏差或逻辑谬误，符合形式逻辑规则。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": true,
+    ""confidence_score"": 1.0,
+    ""fallacy_type"": ""NO_FALLACY""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：识别前提结构。前提1为'如果下雨（P），则地面湿（Q）'，即P→Q；前提2为'地面未湿（¬Q）'。"",
+      ""第二步：应用逻辑规则。根据否定后件推理（Modus Tollens），若P→Q且¬Q，则可推出¬P。"",
+      ""第三步：验证结论必然性。由于前提1和前提2的逻辑关系严格符合Modus Tollens，结论'没有下雨（¬P）'必然成立。"",
+      ""第四步：排除其他干扰因素。即使存在其他导致地面湿的途径，Modus Tollens仅依赖当前前提的有效性，与潜在其他原因无关。""
+    ],
+    ""final_explanation"": ""结论'没有下雨'必然成立。前提1（P→Q）和前提2（¬Q）构成Modus Tollens的有效推理形式，因此结论¬P具有逻辑必然性。该推理未涉及认知偏差或逻辑谬误，符合形式逻辑规则。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+前提1: 如果下雨，地面就会湿。
+前提2: 地面没有湿。
+问题: 结论“没有下雨”是否必然成立？
+"
+1,Modus Tollens (Control),2,True,1.0,NO_FALLACY,"[""第一步：识别前提1为蕴含式命题'如果下雨(P)，则地面湿(Q)'，符号化为P→Q"", ""第二步：前提2为'地面未湿(¬Q)'"", ""第三步：应用逻辑推理规则'否定后件式(Modus Tollens)'，由P→Q和¬Q可推出¬P"", ""第四步：验证推理过程符合命题逻辑的有效性，无歧义或隐含前提""]",根据命题逻辑的否定后件式，当前提'P→Q'和'¬Q'同时成立时，结论'¬P'必然成立。本题中'地面未湿'直接否定了'下雨'的后件，因此'没有下雨'是严格有效的推理，不存在逻辑谬误。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": true,
+    ""confidence_score"": 1.0,
+    ""fallacy_type"": ""NO_FALLACY""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：识别前提1为蕴含式命题'如果下雨(P)，则地面湿(Q)'，符号化为P→Q"",
+      ""第二步：前提2为'地面未湿(¬Q)'"",
+      ""第三步：应用逻辑推理规则'否定后件式(Modus Tollens)'，由P→Q和¬Q可推出¬P"",
+      ""第四步：验证推理过程符合命题逻辑的有效性，无歧义或隐含前提""
+    ],
+    ""final_explanation"": ""根据命题逻辑的否定后件式，当前提'P→Q'和'¬Q'同时成立时，结论'¬P'必然成立。本题中'地面未湿'直接否定了'下雨'的后件，因此'没有下雨'是严格有效的推理，不存在逻辑谬误。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+前提1: 如果下雨，地面就会湿。
+前提2: 地面没有湿。
+问题: 结论“没有下雨”是否必然成立？
+"
+1,Modus Tollens (Control),3,True,1.0,NO_FALLACY,"[""第一步：识别前提结构。前提1为'如果A则B'（A→B），前提2为'非B'（¬B）"", ""第二步：应用逻辑规则Modus Tollens。根据A→B和¬B，可必然推出¬A"", ""第三步：验证结论'没有下雨'（¬A）是否符合逻辑推导规则""]",根据逻辑学中的否定后件规则（Modus Tollens），当'如果A则B'且'非B'同时成立时，'非A'必然成立。本题中A为'下雨'，B为'地面湿'，因此结论'没有下雨'是前提的必然推论，不存在逻辑谬误。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": true,
+    ""confidence_score"": 1.0,
+    ""fallacy_type"": ""NO_FALLACY""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：识别前提结构。前提1为'如果A则B'（A→B），前提2为'非B'（¬B）"",
+      ""第二步：应用逻辑规则Modus Tollens。根据A→B和¬B，可必然推出¬A"",
+      ""第三步：验证结论'没有下雨'（¬A）是否符合逻辑推导规则""
+    ],
+    ""final_explanation"": ""根据逻辑学中的否定后件规则（Modus Tollens），当'如果A则B'且'非B'同时成立时，'非A'必然成立。本题中A为'下雨'，B为'地面湿'，因此结论'没有下雨'是前提的必然推论，不存在逻辑谬误。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+前提1: 如果下雨，地面就会湿。
+前提2: 地面没有湿。
+问题: 结论“没有下雨”是否必然成立？
+"
+1,Denying the Antecedent (Fallacy),1,False,1.0,DENYING_THE_ANTECEDENT,"[""第一步：将前提1转化为逻辑表达式 P → Q（P=拥有钥匙，Q=能开门）"", ""第二步：前提2为 ¬P（没有钥匙）"", ""第三步：结论试图通过 ¬P 推导 ¬Q"", ""第四步：识别逻辑结构为否定前件（Denying the Antecedent）的谬误"", ""第五步：验证 P → Q 与 ¬P 无法必然推出 ¬Q""]",根据逻辑学规则，前提1 'P→Q' 仅表明P是Q的充分条件，而非必要条件。前提2 '¬P' 无法推导出 '¬Q'，因为Q可能由其他未被排除的条件触发。例如，可能存在备用钥匙或破门工具。因此结论不必然成立，属于否定前件谬误。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": false,
+    ""confidence_score"": 1.0,
+    ""fallacy_type"": ""DENYING_THE_ANTECEDENT""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：将前提1转化为逻辑表达式 P → Q（P=拥有钥匙，Q=能开门）"",
+      ""第二步：前提2为 ¬P（没有钥匙）"",
+      ""第三步：结论试图通过 ¬P 推导 ¬Q"",
+      ""第四步：识别逻辑结构为否定前件（Denying the Antecedent）的谬误"",
+      ""第五步：验证 P → Q 与 ¬P 无法必然推出 ¬Q""
+    ],
+    ""final_explanation"": ""根据逻辑学规则，前提1 'P→Q' 仅表明P是Q的充分条件，而非必要条件。前提2 '¬P' 无法推导出 '¬Q'，因为Q可能由其他未被排除的条件触发。例如，可能存在备用钥匙或破门工具。因此结论不必然成立，属于否定前件谬误。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+前提1: 如果你拥有钥匙，你就能打开这扇门。
+前提2: 你没有钥匙。
+问题: 结论“你不能打开这扇门”是否必然成立？
+"
+1,Denying the Antecedent (Fallacy),2,False,0.9,DENYING_THE_ANTECEDENT,"[""第一步：将前提1转化为逻辑表达式 P → Q（P=拥有钥匙，Q=能打开门）"", ""第二步：前提2为 ¬P（没有钥匙）"", ""第三步：结论试图从 P → Q 和 ¬P 推导出 ¬Q"", ""第四步：根据逻辑规则，P → Q 和 ¬P 无法必然推出 ¬Q（否定前件谬误）"", ""第五步：存在其他可能性（如门未锁、备用钥匙等）使 Q 成立""]",结论不必然成立。前提1仅表明钥匙是开门的充分条件，而非必要条件。否定前件（没有钥匙）不能推出后件不成立（不能开门），因为可能存在其他开门方式。这属于'否定前件'的逻辑谬误。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": false,
+    ""confidence_score"": 0.9,
+    ""fallacy_type"": ""DENYING_THE_ANTECEDENT""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：将前提1转化为逻辑表达式 P → Q（P=拥有钥匙，Q=能打开门）"",
+      ""第二步：前提2为 ¬P（没有钥匙）"",
+      ""第三步：结论试图从 P → Q 和 ¬P 推导出 ¬Q"",
+      ""第四步：根据逻辑规则，P → Q 和 ¬P 无法必然推出 ¬Q（否定前件谬误）"",
+      ""第五步：存在其他可能性（如门未锁、备用钥匙等）使 Q 成立""
+    ],
+    ""final_explanation"": ""结论不必然成立。前提1仅表明钥匙是开门的充分条件，而非必要条件。否定前件（没有钥匙）不能推出后件不成立（不能开门），因为可能存在其他开门方式。这属于'否定前件'的逻辑谬误。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+前提1: 如果你拥有钥匙，你就能打开这扇门。
+前提2: 你没有钥匙。
+问题: 结论“你不能打开这扇门”是否必然成立？
+"
+1,Denying the Antecedent (Fallacy),3,False,0.95,DENYING_THE_ANTECEDENT,"[""第一步：将前提1转化为逻辑表达式 P → Q（P=拥有钥匙，Q=能打开门）"", ""第二步：前提2为 ¬P（没有钥匙）"", ""第三步：结论试图通过 ¬P 推导出 ¬Q"", ""第四步：根据逻辑规则，P→Q 不能与 ¬P 结合推出 ¬Q（否定前件谬误）"", ""第五步：存在其他可能性（如门未锁/有备用钥匙）使 ¬P 时 Q 仍可能为真""]",结论不必然成立。前提1仅表明钥匙是开门的充分条件，而非必要条件。否定前件（无钥匙）不能逻辑推导出否定后件（不能开门），因为可能存在其他开门方式。这属于'否定前件'的逻辑谬误。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": false,
+    ""confidence_score"": 0.95,
+    ""fallacy_type"": ""DENYING_THE_ANTECEDENT""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：将前提1转化为逻辑表达式 P → Q（P=拥有钥匙，Q=能打开门）"",
+      ""第二步：前提2为 ¬P（没有钥匙）"",
+      ""第三步：结论试图通过 ¬P 推导出 ¬Q"",
+      ""第四步：根据逻辑规则，P→Q 不能与 ¬P 结合推出 ¬Q（否定前件谬误）"",
+      ""第五步：存在其他可能性（如门未锁/有备用钥匙）使 ¬P 时 Q 仍可能为真""
+    ],
+    ""final_explanation"": ""结论不必然成立。前提1仅表明钥匙是开门的充分条件，而非必要条件。否定前件（无钥匙）不能逻辑推导出否定后件（不能开门），因为可能存在其他开门方式。这属于'否定前件'的逻辑谬误。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+前提1: 如果你拥有钥匙，你就能打开这扇门。
+前提2: 你没有钥匙。
+问题: 结论“你不能打开这扇门”是否必然成立？
+"
+2,Quantifier Scope (Fallacy),1,False,0.9,QUANTIFIER_SCOPE_FALLACY,"[""第一步：将前提转化为逻辑表达式：∀男孩x∃女孩y（x爱y）"", ""第二步：将结论转化为逻辑表达式：∃女孩z∀男孩x（x爱z）"", ""第三步：分析量词顺序差异，前提中存在量词在全称量词内，结论中全称量词在存在量词内"", ""第四步：构造反例：若每个男孩爱不同女孩，则前提成立但结论不成立"", ""第五步：确认结论并非必然由前提导出""]",前提允许不同男孩爱不同女孩，而结论要求存在共同被爱的女孩。由于量词作用域不同，无法从前提必然推出结论。例如三个男孩分别爱不同女孩时，前提成立但结论不成立，因此推理无效。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": false,
+    ""confidence_score"": 0.9,
+    ""fallacy_type"": ""QUANTIFIER_SCOPE_FALLACY""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：将前提转化为逻辑表达式：∀男孩x∃女孩y（x爱y）"",
+      ""第二步：将结论转化为逻辑表达式：∃女孩z∀男孩x（x爱z）"",
+      ""第三步：分析量词顺序差异，前提中存在量词在全称量词内，结论中全称量词在存在量词内"",
+      ""第四步：构造反例：若每个男孩爱不同女孩，则前提成立但结论不成立"",
+      ""第五步：确认结论并非必然由前提导出""
+    ],
+    ""final_explanation"": ""前提允许不同男孩爱不同女孩，而结论要求存在共同被爱的女孩。由于量词作用域不同，无法从前提必然推出结论。例如三个男孩分别爱不同女孩时，前提成立但结论不成立，因此推理无效。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+前提: 每一个男孩都爱着一个女孩。
+问题: 根据此前提，是否可以必然得出“存在一个所有男孩都爱着的女孩”？
+"
+2,Quantifier Scope (Fallacy),2,False,0.9,QUANTIFIER_SCOPE_FALLACY,"[""第一步：将前提转化为逻辑表达式。'每一个男孩都爱着一个女孩'可表示为：∀x(男孩(x) → ∃y(女孩(y) ∧ 爱(x,y)))"", ""第二步：结论要求'存在一个所有男孩都爱着的女孩'，即∃z(女孩(z) ∧ ∀x(男孩(x) → 爱(x,z)))"", ""第三步：分析量词顺序。前提中每个男孩对应不同的存在量词（不同女孩），而结论要求存在一个共同的女孩被所有男孩爱"", ""第四步：构造反例：若每个男孩爱不同的女孩（如A爱a，B爱b，C爱c），则前提成立但结论不成立"", ""第五步：结论不必然成立，因前提未限制所有男孩必须爱同一女孩""]",前提允许不同男孩爱不同女孩，而结论要求存在一个共同被所有男孩爱的女孩。由于量词顺序不同（前提为∀x∃y，结论为∃y∀x），无法从前提必然推出结论。例如，当每个男孩爱不同女孩时，前提成立但结论不成立，故推理无效，属于量化器范围谬误。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": false,
+    ""confidence_score"": 0.9,
+    ""fallacy_type"": ""QUANTIFIER_SCOPE_FALLACY""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：将前提转化为逻辑表达式。'每一个男孩都爱着一个女孩'可表示为：∀x(男孩(x) → ∃y(女孩(y) ∧ 爱(x,y)))"",
+      ""第二步：结论要求'存在一个所有男孩都爱着的女孩'，即∃z(女孩(z) ∧ ∀x(男孩(x) → 爱(x,z)))"",
+      ""第三步：分析量词顺序。前提中每个男孩对应不同的存在量词（不同女孩），而结论要求存在一个共同的女孩被所有男孩爱"",
+      ""第四步：构造反例：若每个男孩爱不同的女孩（如A爱a，B爱b，C爱c），则前提成立但结论不成立"",
+      ""第五步：结论不必然成立，因前提未限制所有男孩必须爱同一女孩""
+    ],
+    ""final_explanation"": ""前提允许不同男孩爱不同女孩，而结论要求存在一个共同被所有男孩爱的女孩。由于量词顺序不同（前提为∀x∃y，结论为∃y∀x），无法从前提必然推出结论。例如，当每个男孩爱不同女孩时，前提成立但结论不成立，故推理无效，属于量化器范围谬误。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+前提: 每一个男孩都爱着一个女孩。
+问题: 根据此前提，是否可以必然得出“存在一个所有男孩都爱着的女孩”？
+"
+2,Quantifier Scope (Fallacy),3,False,0.95,QUANTIFIER_SCOPE_FALLACY,"[""第一步：将前提转化为逻辑表达式∀x(Boy(x)→∃y(Girl(y)∧Loves(x,y)))"", ""第二步：将结论转化为逻辑表达式∃y(Girl(y)∧∀x(Boy(x)→Loves(x,y)))"", ""第三步：比较两个表达式，发现量词顺序不同（∀x∃y vs ∃y∀x）"", ""第四步：构造反例：假设每个男孩爱不同女孩，则前提成立但结论不成立"", ""第五步：确认前提无法保证存在共同被爱的女孩，结论非必然""]",前提允许每个男孩各自爱不同的女孩，而结论要求存在一个被所有男孩共同爱的女孩。由于量词顺序不同（全称与存在的位置交换），前者无法推出后者。例如，若三个男孩分别爱三个不同女孩，前提成立但结论不成立。这属于量词作用域谬误。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": false,
+    ""confidence_score"": 0.95,
+    ""fallacy_type"": ""QUANTIFIER_SCOPE_FALLACY""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：将前提转化为逻辑表达式∀x(Boy(x)→∃y(Girl(y)∧Loves(x,y)))"",
+      ""第二步：将结论转化为逻辑表达式∃y(Girl(y)∧∀x(Boy(x)→Loves(x,y)))"",
+      ""第三步：比较两个表达式，发现量词顺序不同（∀x∃y vs ∃y∀x）"",
+      ""第四步：构造反例：假设每个男孩爱不同女孩，则前提成立但结论不成立"",
+      ""第五步：确认前提无法保证存在共同被爱的女孩，结论非必然""
+    ],
+    ""final_explanation"": ""前提允许每个男孩各自爱不同的女孩，而结论要求存在一个被所有男孩共同爱的女孩。由于量词顺序不同（全称与存在的位置交换），前者无法推出后者。例如，若三个男孩分别爱三个不同女孩，前提成立但结论不成立。这属于量词作用域谬误。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+前提: 每一个男孩都爱着一个女孩。
+问题: 根据此前提，是否可以必然得出“存在一个所有男孩都爱着的女孩”？
+"
+2,Modal Fallacy (De Re/De Dicto),1,False,0.9,MODAL_FALLACY,"[""第一步：识别前提1为全称命题，将'罪犯'定义为'必然犯法的人'"", ""第二步：前提2确认张三属于'罪犯'集合"", ""第三步：结论试图将'属于集合'转化为'个体命运必然性'"", ""第四步：发现'必然'在前提中是逻辑定义属性，结论中被错误强化为宿命论"", ""第五步：指出模态词'必然'的语义在不同语境中发生偏移导致推理断裂""]",前提1的'必然'仅表示'罪犯'概念包含'已犯法'属性，属于逻辑定义层面的必然性。结论将这种分类属性错误提升为对个体命运的必然性断言，混淆了概念定义与现实因果的模态差异。这种将逻辑属性强行转化为现实宿命的推理属于模态谬误。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": false,
+    ""confidence_score"": 0.9,
+    ""fallacy_type"": ""MODAL_FALLACY""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：识别前提1为全称命题，将'罪犯'定义为'必然犯法的人'"",
+      ""第二步：前提2确认张三属于'罪犯'集合"",
+      ""第三步：结论试图将'属于集合'转化为'个体命运必然性'"",
+      ""第四步：发现'必然'在前提中是逻辑定义属性，结论中被错误强化为宿命论"",
+      ""第五步：指出模态词'必然'的语义在不同语境中发生偏移导致推理断裂""
+    ],
+    ""final_explanation"": ""前提1的'必然'仅表示'罪犯'概念包含'已犯法'属性，属于逻辑定义层面的必然性。结论将这种分类属性错误提升为对个体命运的必然性断言，混淆了概念定义与现实因果的模态差异。这种将逻辑属性强行转化为现实宿命的推理属于模态谬误。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+前提1: 罪犯必然是犯了法的人。
+前提2: 张三是罪犯。
+问题: 我们能否必然得出“张三必然是犯了法的人”（即他命中注定要犯法）？
+"
+2,Modal Fallacy (De Re/De Dicto),2,True,0.95,NO_FALLACY,"[""第一步：将前提1形式化为逻辑命题：对所有x，若x是罪犯，则必然x犯了法（∀x(Criminal(x)→□LegalViolation(x))）"", ""第二步：前提2直接断言Criminal(张三)"", ""第三步：通过全称实例化，从前提1可得Criminal(张三)→□LegalViolation(张三)"", ""第四步：结合前提2，通过假言推理（Modus Ponens）可推出□LegalViolation(张三)"", ""第五步：结论中的'必然'与前提1的'必然'保持模态一致性，无逻辑跳跃""]",根据前提1，'罪犯'这一身份蕴含'必然犯法'的模态属性。当张三被确认为罪犯时，通过逻辑推导可直接得出其必然犯法的结论。该推理符合全称命题的实例化和假言推理规则，且模态算子'必然'在前提与结论中保持一致，不存在认知偏差或逻辑谬误。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": true,
+    ""confidence_score"": 0.95,
+    ""fallacy_type"": ""NO_FALLACY""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：将前提1形式化为逻辑命题：对所有x，若x是罪犯，则必然x犯了法（∀x(Criminal(x)→□LegalViolation(x))）"",
+      ""第二步：前提2直接断言Criminal(张三)"",
+      ""第三步：通过全称实例化，从前提1可得Criminal(张三)→□LegalViolation(张三)"",
+      ""第四步：结合前提2，通过假言推理（Modus Ponens）可推出□LegalViolation(张三)"",
+      ""第五步：结论中的'必然'与前提1的'必然'保持模态一致性，无逻辑跳跃""
+    ],
+    ""final_explanation"": ""根据前提1，'罪犯'这一身份蕴含'必然犯法'的模态属性。当张三被确认为罪犯时，通过逻辑推导可直接得出其必然犯法的结论。该推理符合全称命题的实例化和假言推理规则，且模态算子'必然'在前提与结论中保持一致，不存在认知偏差或逻辑谬误。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+前提1: 罪犯必然是犯了法的人。
+前提2: 张三是罪犯。
+问题: 我们能否必然得出“张三必然是犯了法的人”（即他命中注定要犯法）？
+"
+2,Modal Fallacy (De Re/De Dicto),3,True,0.95,NO_FALLACY,"[""第一步：解析前提1的模态结构。'罪犯必然是犯了法的人'可形式化为□(罪犯(x)→犯法(x))，其中□表示必然性。"", ""第二步：前提2断言张三是罪犯（罪犯(张三)）。"", ""第三步：根据模态逻辑的推理规则，若□(罪犯(x)→犯法(x))且罪犯(张三)，则可推出□(犯法(张三))。"", ""第四步：结论'张三必然是犯了法的人'与形式化推导结果一致，无逻辑跳跃或谬误。""]",前提1通过模态算子□明确了'罪犯→犯法'的必然性。结合前提2的实例化（张三是罪犯），可直接应用模态逻辑的推理规则，必然导出'张三必然犯法'的结论。推理过程严格遵循模态蕴含关系，不存在认知偏差或逻辑谬误。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": true,
+    ""confidence_score"": 0.95,
+    ""fallacy_type"": ""NO_FALLACY""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：解析前提1的模态结构。'罪犯必然是犯了法的人'可形式化为□(罪犯(x)→犯法(x))，其中□表示必然性。"",
+      ""第二步：前提2断言张三是罪犯（罪犯(张三)）。"",
+      ""第三步：根据模态逻辑的推理规则，若□(罪犯(x)→犯法(x))且罪犯(张三)，则可推出□(犯法(张三))。"",
+      ""第四步：结论'张三必然是犯了法的人'与形式化推导结果一致，无逻辑跳跃或谬误。""
+    ],
+    ""final_explanation"": ""前提1通过模态算子□明确了'罪犯→犯法'的必然性。结合前提2的实例化（张三是罪犯），可直接应用模态逻辑的推理规则，必然导出'张三必然犯法'的结论。推理过程严格遵循模态蕴含关系，不存在认知偏差或逻辑谬误。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+前提1: 罪犯必然是犯了法的人。
+前提2: 张三是罪犯。
+问题: 我们能否必然得出“张三必然是犯了法的人”（即他命中注定要犯法）？
+"
+2,Composition Fallacy,1,False,0.9,COMPOSITION_FALLACY,"[""第一步：识别前提为全称命题（所有球员都是顶尖）"", ""第二步：结论试图从个体属性推导整体属性"", ""第三步：分析'顶尖'的定义是否包含团队协作等整体性要素"", ""第四步：发现个体优秀不等于整体必然优秀的逻辑漏洞"", ""第五步：确认存在合成谬误（将部分属性错误归因于整体）""]",虽然每位球员都是顶尖的，但球队的整体表现还取决于战术配合、团队协作等因素。个体优秀不能保证整体必然优秀，这种将部分属性直接赋予整体的推理属于合成谬误。因此结论并非必然成立。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": false,
+    ""confidence_score"": 0.9,
+    ""fallacy_type"": ""COMPOSITION_FALLACY""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：识别前提为全称命题（所有球员都是顶尖）"",
+      ""第二步：结论试图从个体属性推导整体属性"",
+      ""第三步：分析'顶尖'的定义是否包含团队协作等整体性要素"",
+      ""第四步：发现个体优秀不等于整体必然优秀的逻辑漏洞"",
+      ""第五步：确认存在合成谬误（将部分属性错误归因于整体）""
+    ],
+    ""final_explanation"": ""虽然每位球员都是顶尖的，但球队的整体表现还取决于战术配合、团队协作等因素。个体优秀不能保证整体必然优秀，这种将部分属性直接赋予整体的推理属于合成谬误。因此结论并非必然成立。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+前提: 球队里的每一位球员都是顶尖的。
+问题: 结论“这支球队一定是顶尖的”是否必然成立？
+"
+2,Composition Fallacy,2,False,0.9,COMPOSITION_FALLACY,"[""第一步：识别前提为全称命题（所有球员都是顶尖的）"", ""第二步：分析结论将个体属性直接推广到整体属性"", ""第三步：指出整体属性（球队顶尖）需依赖团队协作等额外条件"", ""第四步：确认前提未涵盖团队协作等必要信息"", ""第五步：判定结论存在合成谬误（假设部分属性必然导致整体属性）""]",虽然每位球员都是顶尖的，但球队的整体表现还需依赖战术配合、化学反应等团队因素。个体优秀不能保证整体必然优秀，因此结论不必然成立。该推理错误地将个体属性直接组合成整体属性，属于合成谬误。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": false,
+    ""confidence_score"": 0.9,
+    ""fallacy_type"": ""COMPOSITION_FALLACY""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：识别前提为全称命题（所有球员都是顶尖的）"",
+      ""第二步：分析结论将个体属性直接推广到整体属性"",
+      ""第三步：指出整体属性（球队顶尖）需依赖团队协作等额外条件"",
+      ""第四步：确认前提未涵盖团队协作等必要信息"",
+      ""第五步：判定结论存在合成谬误（假设部分属性必然导致整体属性）""
+    ],
+    ""final_explanation"": ""虽然每位球员都是顶尖的，但球队的整体表现还需依赖战术配合、化学反应等团队因素。个体优秀不能保证整体必然优秀，因此结论不必然成立。该推理错误地将个体属性直接组合成整体属性，属于合成谬误。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+前提: 球队里的每一位球员都是顶尖的。
+问题: 结论“这支球队一定是顶尖的”是否必然成立？
+"
+2,Composition Fallacy,3,False,0.9,COMPOSITION_FALLACY,"[""第一步：识别前提为'所有球员个体顶尖'，结论为'球队整体顶尖'"", ""第二步：分析从个体属性到整体属性的推理结构"", ""第三步：确认存在合成谬误（将部分属性直接赋予整体）"", ""第四步：指出球队表现还需依赖战术配合等整体性因素""]",虽然每位球员都是顶尖的，但球队整体表现还需考虑战术执行、团队配合等因素。个体优秀不必然保证整体优秀，因此结论不成立。该推理错误地将部分属性直接组合成整体属性，属于合成谬误。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": false,
+    ""confidence_score"": 0.9,
+    ""fallacy_type"": ""COMPOSITION_FALLACY""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：识别前提为'所有球员个体顶尖'，结论为'球队整体顶尖'"",
+      ""第二步：分析从个体属性到整体属性的推理结构"",
+      ""第三步：确认存在合成谬误（将部分属性直接赋予整体）"",
+      ""第四步：指出球队表现还需依赖战术配合等整体性因素""
+    ],
+    ""final_explanation"": ""虽然每位球员都是顶尖的，但球队整体表现还需考虑战术执行、团队配合等因素。个体优秀不必然保证整体优秀，因此结论不成立。该推理错误地将部分属性直接组合成整体属性，属于合成谬误。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+前提: 球队里的每一位球员都是顶尖的。
+问题: 结论“这支球队一定是顶尖的”是否必然成立？
+"
+3,Liar Paradox,1,,1.0,PARADOX,"[""第一步：识别句子A的自我指涉结构，其真值直接依赖于自身陈述的真假。"", ""第二步：假设A为真，则根据其内容，A应为假，导致矛盾。"", ""第三步：假设A为假，则根据其内容，A应为真，再次导致矛盾。"", ""第四步：两种假设均导致矛盾，说明句子A的真值无法在二值逻辑中一致确定。"", ""第五步：确认该结构符合说谎者悖论的经典形式，属于逻辑悖论。""]",句子A通过自我指涉形成逻辑闭环：若A为真，则其内容要求A为假；若A为假，则其内容要求A为真。两种假设均导致矛盾，因此该句子构成无法解决的悖论，不存在一致的真值赋值。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": null,
+    ""confidence_score"": 1.0,
+    ""fallacy_type"": ""PARADOX""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：识别句子A的自我指涉结构，其真值直接依赖于自身陈述的真假。"",
+      ""第二步：假设A为真，则根据其内容，A应为假，导致矛盾。"",
+      ""第三步：假设A为假，则根据其内容，A应为真，再次导致矛盾。"",
+      ""第四步：两种假设均导致矛盾，说明句子A的真值无法在二值逻辑中一致确定。"",
+      ""第五步：确认该结构符合说谎者悖论的经典形式，属于逻辑悖论。""
+    ],
+    ""final_explanation"": ""句子A通过自我指涉形成逻辑闭环：若A为真，则其内容要求A为假；若A为假，则其内容要求A为真。两种假设均导致矛盾，因此该句子构成无法解决的悖论，不存在一致的真值赋值。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+考虑这个句子A：“这个句子A是假的。”
+问题: 请分析句子A的真值状态，并解释其中蕴含的逻辑困境。
+"
+3,Liar Paradox,2,,0.9,PARADOX,"[""第一步：识别句子A的自我指涉结构，其真值直接依赖于自身内容的真假。"", ""第二步：假设A为真，则其内容'A是假的'必须为真，导致矛盾（A既真又假）。"", ""第三步：假设A为假，则其内容'A是假的'必须为假，导致矛盾（A既假又真）。"", ""第四步：发现两种假设均导致逻辑矛盾，说明句子A的真值无法在经典逻辑框架内一致确定。"", ""第五步：确认该结构符合说谎者悖论的经典形式，属于逻辑悖论范畴。""]",句子A通过自我指涉形成逻辑闭环：若A为真，则其内容要求A为假；若A为假，则其内容要求A为真。这种相互矛盾的依赖关系导致真值无法确定，构成典型的'说谎者悖论'。该困境揭示了集合论中自我指涉语句的固有矛盾，无法通过传统二值逻辑解决。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": null,
+    ""confidence_score"": 0.9,
+    ""fallacy_type"": ""PARADOX""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：识别句子A的自我指涉结构，其真值直接依赖于自身内容的真假。"",
+      ""第二步：假设A为真，则其内容'A是假的'必须为真，导致矛盾（A既真又假）。"",
+      ""第三步：假设A为假，则其内容'A是假的'必须为假，导致矛盾（A既假又真）。"",
+      ""第四步：发现两种假设均导致逻辑矛盾，说明句子A的真值无法在经典逻辑框架内一致确定。"",
+      ""第五步：确认该结构符合说谎者悖论的经典形式，属于逻辑悖论范畴。""
+    ],
+    ""final_explanation"": ""句子A通过自我指涉形成逻辑闭环：若A为真，则其内容要求A为假；若A为假，则其内容要求A为真。这种相互矛盾的依赖关系导致真值无法确定，构成典型的'说谎者悖论'。该困境揭示了集合论中自我指涉语句的固有矛盾，无法通过传统二值逻辑解决。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+考虑这个句子A：“这个句子A是假的。”
+问题: 请分析句子A的真值状态，并解释其中蕴含的逻辑困境。
+"
+3,Liar Paradox,3,,1.0,PARADOX,"[""第一步：假设句子A为真，则其内容'这个句子A是假的'必须成立，导致矛盾（真→假）"", ""第二步：假设句子A为假，则其内容'这个句子A是假的'不成立，导致矛盾（假→真）"", ""第三步：两种假设均导致自相矛盾，形成逻辑闭环，无法赋予一致真值""]",句子A通过自指构建了无法解套的悖论：若真则内容要求其假，若假则内容要求其真。这种自我否定的循环使真值赋值陷入无限矛盾，构成典型的'说谎者悖论'。该困境源于语句对自身的真值进行断言，导致逻辑系统无法兼容其真/假状态。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": null,
+    ""confidence_score"": 1.0,
+    ""fallacy_type"": ""PARADOX""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：假设句子A为真，则其内容'这个句子A是假的'必须成立，导致矛盾（真→假）"",
+      ""第二步：假设句子A为假，则其内容'这个句子A是假的'不成立，导致矛盾（假→真）"",
+      ""第三步：两种假设均导致自相矛盾，形成逻辑闭环，无法赋予一致真值""
+    ],
+    ""final_explanation"": ""句子A通过自指构建了无法解套的悖论：若真则内容要求其假，若假则内容要求其真。这种自我否定的循环使真值赋值陷入无限矛盾，构成典型的'说谎者悖论'。该困境源于语句对自身的真值进行断言，导致逻辑系统无法兼容其真/假状态。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+考虑这个句子A：“这个句子A是假的。”
+问题: 请分析句子A的真值状态，并解释其中蕴含的逻辑困境。
+"
+3,Curry's Paradox,1,,0.95,PARADOX,"[""第一步：识别句子C的自指结构——C的真假直接影响其结论（独角兽存在）的断言。"", ""第二步：假设C为真，则根据其内容，独角兽必须存在。但若独角兽存在，C的真假是否依赖自身？此处未形成直接矛盾。"", ""第三步：假设C为假，则原命题的否定为‘C为真且独角兽不存在’。但C为假时，‘C为真’不成立，导致矛盾（假命题蕴含任何结论均为真，但此处否定形式引发逻辑冲突）。"", ""第四步：发现无论接受C为真或假，均导致矛盾或强制结论，形成无法一致的闭环。"", ""第五步：确认该结构与经典说谎者悖论同构，属于自指引发的不可解悖论。""]",接受句子C会导致矛盾：若C为真，则独角兽必须存在；但若C为假，则需满足‘C为真且独角兽不存在’，这不可能。因此，C的真假无法一致确定，形成逻辑悖论。结论（独角兽存在）虽被强制导出，但过程因自指而无效，故属于悖论而非有效推理。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": null,
+    ""confidence_score"": 0.95,
+    ""fallacy_type"": ""PARADOX""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：识别句子C的自指结构——C的真假直接影响其结论（独角兽存在）的断言。"",
+      ""第二步：假设C为真，则根据其内容，独角兽必须存在。但若独角兽存在，C的真假是否依赖自身？此处未形成直接矛盾。"",
+      ""第三步：假设C为假，则原命题的否定为‘C为真且独角兽不存在’。但C为假时，‘C为真’不成立，导致矛盾（假命题蕴含任何结论均为真，但此处否定形式引发逻辑冲突）。"",
+      ""第四步：发现无论接受C为真或假，均导致矛盾或强制结论，形成无法一致的闭环。"",
+      ""第五步：确认该结构与经典说谎者悖论同构，属于自指引发的不可解悖论。""
+    ],
+    ""final_explanation"": ""接受句子C会导致矛盾：若C为真，则独角兽必须存在；但若C为假，则需满足‘C为真且独角兽不存在’，这不可能。因此，C的真假无法一致确定，形成逻辑悖论。结论（独角兽存在）虽被强制导出，但过程因自指而无效，故属于悖论而非有效推理。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+考虑这个句子C：“如果这个句子C为真，那么独角兽就存在。”
+问题: 请分析，如果我们接受该句子C，会推导出什么结论？并解释其悖论性质。
+"
+3,Curry's Paradox,2,,1.0,PARADOX,"[""第一步：识别句子C的自我指涉结构——C的真假直接影响其结论（独角兽存在）的断言。"", ""第二步：假设C为真，则根据C的内容，独角兽必须存在。此时C的断言成立，无矛盾。"", ""第三步：假设C为假，则原命题'如果C为真，那么独角兽存在'仍为真（因前提为假）。此时独角兽可不存在，但C的假导致其内容未被触发，表面无矛盾。"", ""第四步：发现循环依赖——C的真假与独角兽存在性互相绑定，无法独立确定。"", ""第五步：揭示悖论本质——若接受C为真，则独角兽存在；若否定C为真，则原命题仍成立但独角兽可能存在或不存在。这种自我指涉导致无法一致赋值。""]",句子C是典型的自我指涉悖论。若接受C为真，则必须承认独角兽存在；但若否定C为真，原命题仍成立且独角兽可能存在或不存在。这种循环依赖使得C的真假无法独立确定，形成逻辑悖论。因此，该问题属于'PARADOX'类型，无有效推理路径。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": null,
+    ""confidence_score"": 1.0,
+    ""fallacy_type"": ""PARADOX""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：识别句子C的自我指涉结构——C的真假直接影响其结论（独角兽存在）的断言。"",
+      ""第二步：假设C为真，则根据C的内容，独角兽必须存在。此时C的断言成立，无矛盾。"",
+      ""第三步：假设C为假，则原命题'如果C为真，那么独角兽存在'仍为真（因前提为假）。此时独角兽可不存在，但C的假导致其内容未被触发，表面无矛盾。"",
+      ""第四步：发现循环依赖——C的真假与独角兽存在性互相绑定，无法独立确定。"",
+      ""第五步：揭示悖论本质——若接受C为真，则独角兽存在；若否定C为真，则原命题仍成立但独角兽可能存在或不存在。这种自我指涉导致无法一致赋值。""
+    ],
+    ""final_explanation"": ""句子C是典型的自我指涉悖论。若接受C为真，则必须承认独角兽存在；但若否定C为真，原命题仍成立且独角兽可能存在或不存在。这种循环依赖使得C的真假无法独立确定，形成逻辑悖论。因此，该问题属于'PARADOX'类型，无有效推理路径。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+考虑这个句子C：“如果这个句子C为真，那么独角兽就存在。”
+问题: 请分析，如果我们接受该句子C，会推导出什么结论？并解释其悖论性质。
+"
+3,Curry's Paradox,3,,1.0,PARADOX,"[""第一步：识别句子C的自我指涉结构，其内容为'若C为真，则独角兽存在'。"", ""第二步：假设C为真，则根据其内容，独角兽必须存在。此时无直接矛盾。"", ""第三步：假设C为假，则其内容'若C为真则独角兽存在'仍为真（因前提为假时蕴含式恒真），导致C既为假又为真的矛盾。"", ""第四步：发现无论C的真假如何，均会导致逻辑矛盾，形成悖论。"", ""第五步：确认该悖论与说谎者悖论结构相似，属于自指引发的无法一致赋值的困境。""]",接受句子C会导致悖论：若C为真，则独角兽必须存在；但若独角兽不存在，则C必须为假，此时C的内容'若C为真则独角兽存在'仍成立（因前提为假），导致C同时为真和假的矛盾。这种自我指涉的循环依赖使结论无法一致确定，构成逻辑悖论。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": null,
+    ""confidence_score"": 1.0,
+    ""fallacy_type"": ""PARADOX""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：识别句子C的自我指涉结构，其内容为'若C为真，则独角兽存在'。"",
+      ""第二步：假设C为真，则根据其内容，独角兽必须存在。此时无直接矛盾。"",
+      ""第三步：假设C为假，则其内容'若C为真则独角兽存在'仍为真（因前提为假时蕴含式恒真），导致C既为假又为真的矛盾。"",
+      ""第四步：发现无论C的真假如何，均会导致逻辑矛盾，形成悖论。"",
+      ""第五步：确认该悖论与说谎者悖论结构相似，属于自指引发的无法一致赋值的困境。""
+    ],
+    ""final_explanation"": ""接受句子C会导致悖论：若C为真，则独角兽必须存在；但若独角兽不存在，则C必须为假，此时C的内容'若C为真则独角兽存在'仍成立（因前提为假），导致C同时为真和假的矛盾。这种自我指涉的循环依赖使结论无法一致确定，构成逻辑悖论。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+考虑这个句子C：“如果这个句子C为真，那么独角兽就存在。”
+问题: 请分析，如果我们接受该句子C，会推导出什么结论？并解释其悖论性质。
+"
+4,Linda Problem (Conjunction Fallacy),1,False,0.95,CONJUNCTION_FALLACY,"[""第一步：识别问题类型为概率判断与认知偏差的结合。"", ""第二步：分析选项结构，A是单一属性（银行出纳），B是A与额外属性（参与女权运动）的合取。"", ""第三步：根据概率论，合取事件B的概率应小于等于单一事件A的概率（P(B) ≤ P(A)）。"", ""第四步：观察琳达的特征（哲学、关注社会公正）可能引发对B的直觉偏好，但逻辑上B不能更可能。"", ""第五步：确认常见直觉回答倾向选择B，但此判断违背概率规则，属于合取谬误。""]",虽然琳达的特征（如关注社会公正）可能让人直觉认为B更合理，但逻辑上，'银行出纳且参与女权运动'（B）的概率不可能超过'银行出纳'（A）的概率。选择B是典型的合取谬误，即错误认为合取事件比单一事件更可能发生。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": false,
+    ""confidence_score"": 0.95,
+    ""fallacy_type"": ""CONJUNCTION_FALLACY""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：识别问题类型为概率判断与认知偏差的结合。"",
+      ""第二步：分析选项结构，A是单一属性（银行出纳），B是A与额外属性（参与女权运动）的合取。"",
+      ""第三步：根据概率论，合取事件B的概率应小于等于单一事件A的概率（P(B) ≤ P(A)）。"",
+      ""第四步：观察琳达的特征（哲学、关注社会公正）可能引发对B的直觉偏好，但逻辑上B不能更可能。"",
+      ""第五步：确认常见直觉回答倾向选择B，但此判断违背概率规则，属于合取谬误。""
+    ],
+    ""final_explanation"": ""虽然琳达的特征（如关注社会公正）可能让人直觉认为B更合理，但逻辑上，'银行出纳且参与女权运动'（B）的概率不可能超过'银行出纳'（A）的概率。选择B是典型的合取谬误，即错误认为合取事件比单一事件更可能发生。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+琳达31岁，单身，性格外向，非常聪明。她主修哲学，并高度关注社会公正问题。
+问题: 请判断以下哪种情况可能性更大：
+A) 琳达是一名银行出纳。
+B) 琳达是一名银行出纳，并且积极参与女权主义运动。
+"
+4,Linda Problem (Conjunction Fallacy),2,False,0.95,CONJUNCTION_FALLACY,"[""第一步：识别问题类型为经典的'合取谬误'（Conjunction Fallacy）场景"", ""第二步：分析选项B是选项A的合取（A且C），根据概率论，P(A且C) ≤ P(A)"", ""第三步：指出人类直觉常因'典型性启发式'高估具体描述（如B）的可能性"", ""第四步：确认逻辑上A的概率必然大于等于B，但多数人会错误选择B""]",根据概率规则，单一事件（A）的概率必然大于或等于其合取事件（B）。但人们因'典型性启发式'认为B更符合琳达的特征描述，从而产生合取谬误。尽管B看似更具体，其实际概率不可能超过A。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": false,
+    ""confidence_score"": 0.95,
+    ""fallacy_type"": ""CONJUNCTION_FALLACY""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：识别问题类型为经典的'合取谬误'（Conjunction Fallacy）场景"",
+      ""第二步：分析选项B是选项A的合取（A且C），根据概率论，P(A且C) ≤ P(A)"",
+      ""第三步：指出人类直觉常因'典型性启发式'高估具体描述（如B）的可能性"",
+      ""第四步：确认逻辑上A的概率必然大于等于B，但多数人会错误选择B""
+    ],
+    ""final_explanation"": ""根据概率规则，单一事件（A）的概率必然大于或等于其合取事件（B）。但人们因'典型性启发式'认为B更符合琳达的特征描述，从而产生合取谬误。尽管B看似更具体，其实际概率不可能超过A。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+琳达31岁，单身，性格外向，非常聪明。她主修哲学，并高度关注社会公正问题。
+问题: 请判断以下哪种情况可能性更大：
+A) 琳达是一名银行出纳。
+B) 琳达是一名银行出纳，并且积极参与女权主义运动。
+"
+4,Linda Problem (Conjunction Fallacy),3,False,0.95,CONJUNCTION_FALLACY,"[""第一步：识别问题类型为合取谬误（Conjunction Fallacy）的经典案例"", ""第二步：分析选项B是选项A的合取（A ∧ 额外条件）"", ""第三步：根据概率论，合取事件的概率不可能高于单一事件（P(B) ≤ P(A)）"", ""第四步：观察描述中'关注社会公正'与'女权主义运动'的关联性"", ""第五步：指出直觉倾向于选择B是典型的合取谬误表现"", ""第六步：确认基础概率未被正确考虑（如银行出纳的职业基础率）""]",虽然选项B中的'女权主义运动'与琳达特征更契合，但逻辑上B作为A的合取事件，其概率不可能超过A。选择B的直觉反应违反了概率基本原则，属于合取谬误。因此常见直觉答案不符合逻辑。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": false,
+    ""confidence_score"": 0.95,
+    ""fallacy_type"": ""CONJUNCTION_FALLACY""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：识别问题类型为合取谬误（Conjunction Fallacy）的经典案例"",
+      ""第二步：分析选项B是选项A的合取（A ∧ 额外条件）"",
+      ""第三步：根据概率论，合取事件的概率不可能高于单一事件（P(B) ≤ P(A)）"",
+      ""第四步：观察描述中'关注社会公正'与'女权主义运动'的关联性"",
+      ""第五步：指出直觉倾向于选择B是典型的合取谬误表现"",
+      ""第六步：确认基础概率未被正确考虑（如银行出纳的职业基础率）""
+    ],
+    ""final_explanation"": ""虽然选项B中的'女权主义运动'与琳达特征更契合，但逻辑上B作为A的合取事件，其概率不可能超过A。选择B的直觉反应违反了概率基本原则，属于合取谬误。因此常见直觉答案不符合逻辑。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+琳达31岁，单身，性格外向，非常聪明。她主修哲学，并高度关注社会公正问题。
+问题: 请判断以下哪种情况可能性更大：
+A) 琳达是一名银行出纳。
+B) 琳达是一名银行出纳，并且积极参与女权主义运动。
+"
+4,Gambler's Fallacy,1,False,0.95,GAMBLER_S_FALLACY,"[""第一步：识别前提——硬币是公平的，每次投掷独立且正反面概率均为50%。"", ""第二步：分析问题核心——第10次投掷的概率是否受前9次结果影响。"", ""第三步：应用概率独立性原则——独立事件的过去结果不影响未来概率。"", ""第四步：判断直觉偏差——常见误解认为连续正面后反面概率会'补偿性'增加（赌徒谬误）。"", ""第五步：结论——正反面概率仍相等，直觉回答不符合逻辑。""]",由于每次投掷是独立事件，前9次结果不影响第10次的概率。公平硬币正反面概率始终为50%，认为反面可能性更大是典型的赌徒谬误，忽略了独立事件的本质。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": false,
+    ""confidence_score"": 0.95,
+    ""fallacy_type"": ""GAMBLER_S_FALLACY""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：识别前提——硬币是公平的，每次投掷独立且正反面概率均为50%。"",
+      ""第二步：分析问题核心——第10次投掷的概率是否受前9次结果影响。"",
+      ""第三步：应用概率独立性原则——独立事件的过去结果不影响未来概率。"",
+      ""第四步：判断直觉偏差——常见误解认为连续正面后反面概率会'补偿性'增加（赌徒谬误）。"",
+      ""第五步：结论——正反面概率仍相等，直觉回答不符合逻辑。""
+    ],
+    ""final_explanation"": ""由于每次投掷是独立事件，前9次结果不影响第10次的概率。公平硬币正反面概率始终为50%，认为反面可能性更大是典型的赌徒谬误，忽略了独立事件的本质。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+前提: 一枚公平的硬币连续投掷了9次，每次都是正面朝上。
+问题: 在第10次投掷时，是正面朝上的可能性大，还是反面朝上的可能性大？
+"
+4,Gambler's Fallacy,2,False,0.95,GAMBLER_S_FALLACY,"[""第一步：明确前提——硬币是公平的，每次投掷独立且概率均等。"", ""第二步：识别问题核心——判断第10次投掷的概率是否受前9次结果影响。"", ""第三步：应用概率独立性原则——前9次结果不影响第10次的概率分布。"", ""第四步：分析常见直觉误区——可能误认为连续正面后反面概率会'补偿性'增加（赌徒谬误）。"", ""第五步：结论——第10次正反面概率仍为50%，常见直觉答案错误。""]",由于每次投掷是独立事件，前9次结果不影响第10次的概率。公平硬币正反面概率始终相等，因此认为反面可能性更大是典型的赌徒谬误。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": false,
+    ""confidence_score"": 0.95,
+    ""fallacy_type"": ""GAMBLER_S_FALLACY""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：明确前提——硬币是公平的，每次投掷独立且概率均等。"",
+      ""第二步：识别问题核心——判断第10次投掷的概率是否受前9次结果影响。"",
+      ""第三步：应用概率独立性原则——前9次结果不影响第10次的概率分布。"",
+      ""第四步：分析常见直觉误区——可能误认为连续正面后反面概率会'补偿性'增加（赌徒谬误）。"",
+      ""第五步：结论——第10次正反面概率仍为50%，常见直觉答案错误。""
+    ],
+    ""final_explanation"": ""由于每次投掷是独立事件，前9次结果不影响第10次的概率。公平硬币正反面概率始终相等，因此认为反面可能性更大是典型的赌徒谬误。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+前提: 一枚公平的硬币连续投掷了9次，每次都是正面朝上。
+问题: 在第10次投掷时，是正面朝上的可能性大，还是反面朝上的可能性大？
+"
+4,Gambler's Fallacy,3,False,1.0,GAMBLER_S_FALLACY,"[""第一步：明确前提——硬币是公平的，每次投掷独立且正反面概率均为50%。"", ""第二步：分析问题核心——第10次投掷的概率是否受前9次结果影响。"", ""第三步：应用概率独立性原则——前9次结果不影响第10次的概率分布。"", ""第四步：计算第10次投掷的概率——正面和反面概率仍为50%（0.5）。"", ""第五步：识别认知偏差——常见直觉认为连续正面后反面概率更高，属于赌徒谬误。""]",由于每次投掷是独立事件，前9次结果不影响第10次的概率。公平硬币正反面概率始终为50%，因此第10次投掷正反面可能性相等。常见直觉认为反面概率更大，违背了独立事件的概率原则，属于赌徒谬误。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": false,
+    ""confidence_score"": 1.0,
+    ""fallacy_type"": ""GAMBLER_S_FALLACY""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：明确前提——硬币是公平的，每次投掷独立且正反面概率均为50%。"",
+      ""第二步：分析问题核心——第10次投掷的概率是否受前9次结果影响。"",
+      ""第三步：应用概率独立性原则——前9次结果不影响第10次的概率分布。"",
+      ""第四步：计算第10次投掷的概率——正面和反面概率仍为50%（0.5）。"",
+      ""第五步：识别认知偏差——常见直觉认为连续正面后反面概率更高，属于赌徒谬误。""
+    ],
+    ""final_explanation"": ""由于每次投掷是独立事件，前9次结果不影响第10次的概率。公平硬币正反面概率始终为50%，因此第10次投掷正反面可能性相等。常见直觉认为反面概率更大，违背了独立事件的概率原则，属于赌徒谬误。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+前提: 一枚公平的硬币连续投掷了9次，每次都是正面朝上。
+问题: 在第10次投掷时，是正面朝上的可能性大，还是反面朝上的可能性大？
+"
+4,Base Rate Fallacy,1,False,0.95,BASE_RATE_FALLACY,"[""第一步：明确问题为计算目击者指认蓝色后的后验概率。"", ""第二步：识别先验概率（蓝色15%，绿色85%）和目击者准确率（正确80%，错误20%）。"", ""第三步：应用贝叶斯定理，计算分子（蓝色且正确识别）和分母（所有说蓝色的情况）。"", ""第四步：计算得P(蓝色|说蓝色)= (0.15×0.8)/(0.15×0.8+0.85×0.2)≈41.38%。"", ""第五步：对比选项，41.38%远低于80%，故正确答案为B。""]",尽管目击者准确率为80%，但因蓝色出租车的基础比率仅15%，实际概率需结合基础比率计算。正确应用贝叶斯定理后，概率约为41%，远低于80%。常见直觉错误（选A）忽略了基础比率，属于基础比率谬误。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": false,
+    ""confidence_score"": 0.95,
+    ""fallacy_type"": ""BASE_RATE_FALLACY""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：明确问题为计算目击者指认蓝色后的后验概率。"",
+      ""第二步：识别先验概率（蓝色15%，绿色85%）和目击者准确率（正确80%，错误20%）。"",
+      ""第三步：应用贝叶斯定理，计算分子（蓝色且正确识别）和分母（所有说蓝色的情况）。"",
+      ""第四步：计算得P(蓝色|说蓝色)= (0.15×0.8)/(0.15×0.8+0.85×0.2)≈41.38%。"",
+      ""第五步：对比选项，41.38%远低于80%，故正确答案为B。""
+    ],
+    ""final_explanation"": ""尽管目击者准确率为80%，但因蓝色出租车的基础比率仅15%，实际概率需结合基础比率计算。正确应用贝叶斯定理后，概率约为41%，远低于80%。常见直觉错误（选A）忽略了基础比率，属于基础比率谬误。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+背景：在一个城市，出租车由两家公司运营：85%是绿色的，15%是蓝色的。一天晚上，发生了一起出租车肇事逃逸事故。一位目击者指认肇事车辆是蓝色的。法庭测试了目击者在夜间识别颜色的能力，发现其准确率为80%。
+问题: 请问，肇事出租车实际上是蓝色的概率有多大？（A) 大约80% (B) 远低于80%。请选择并解释。
+"
+4,Base Rate Fallacy,2,False,0.95,BASE_RATE_FALLACY,"[""第一步：确定基础概率，绿色出租车占85%（P(G)=0.85），蓝色占15%（P(B)=0.15）"", ""第二步：目击者准确率为80%，即当车是蓝色时，正确识别的概率为80%（P(T|B)=0.8），当车是绿色时，错误识别为蓝色的概率为20%（P(T|G)=0.2）"", ""第三步：应用贝叶斯定理计算P(B|T) = [P(T|B)*P(B)] / [P(T|B)*P(B) + P(T|G)*P(G)]"", ""第四步：代入数值计算得P(B|T) ≈ 0.4138（约41.4%），远低于80%"", ""第五步：常见直觉可能忽略基础比率，仅关注目击者准确率，导致错误选择A选项""]",根据贝叶斯定理计算，实际概率约为41.4%，远低于80%。常见错误（选A）因忽视基础比率（蓝车仅15%）而高估了目击者证词的影响，属于基础比率谬误。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": false,
+    ""confidence_score"": 0.95,
+    ""fallacy_type"": ""BASE_RATE_FALLACY""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：确定基础概率，绿色出租车占85%（P(G)=0.85），蓝色占15%（P(B)=0.15）"",
+      ""第二步：目击者准确率为80%，即当车是蓝色时，正确识别的概率为80%（P(T|B)=0.8），当车是绿色时，错误识别为蓝色的概率为20%（P(T|G)=0.2）"",
+      ""第三步：应用贝叶斯定理计算P(B|T) = [P(T|B)*P(B)] / [P(T|B)*P(B) + P(T|G)*P(G)]"",
+      ""第四步：代入数值计算得P(B|T) ≈ 0.4138（约41.4%），远低于80%"",
+      ""第五步：常见直觉可能忽略基础比率，仅关注目击者准确率，导致错误选择A选项""
+    ],
+    ""final_explanation"": ""根据贝叶斯定理计算，实际概率约为41.4%，远低于80%。常见错误（选A）因忽视基础比率（蓝车仅15%）而高估了目击者证词的影响，属于基础比率谬误。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+背景：在一个城市，出租车由两家公司运营：85%是绿色的，15%是蓝色的。一天晚上，发生了一起出租车肇事逃逸事故。一位目击者指认肇事车辆是蓝色的。法庭测试了目击者在夜间识别颜色的能力，发现其准确率为80%。
+问题: 请问，肇事出租车实际上是蓝色的概率有多大？（A) 大约80% (B) 远低于80%。请选择并解释。
+"
+4,Base Rate Fallacy,3,False,1.0,BASE_RATE_FALLACY,"[""第一步：识别问题类型为条件概率计算，需应用贝叶斯定理。"", ""第二步：确定先验概率（蓝车15%、绿车85%）和目击者准确率（80%正确识别蓝车，20%错误将绿车识别为蓝车）。"", ""第三步：计算后验概率P(蓝|指认蓝) = (0.8*0.15)/(0.8*0.15 + 0.2*0.85) ≈ 41.4%。"", ""第四步：比较选项，41.4%远低于80%，故正确答案为B。"", ""第五步：指出选项A的错误源于忽视基础比率，属于BASE_RATE_FALLACY。""]",根据贝叶斯定理，肇事车实际为蓝色的概率约为41.4%，远低于80%。选项A错误地将目击者准确率直接等同于结论概率，忽视了基础比率（蓝车仅占15%）的影响，属于基础比率谬误。,True,"```json
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": false,
+    ""confidence_score"": 1.0,
+    ""fallacy_type"": ""BASE_RATE_FALLACY""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": [
+      ""第一步：识别问题类型为条件概率计算，需应用贝叶斯定理。"",
+      ""第二步：确定先验概率（蓝车15%、绿车85%）和目击者准确率（80%正确识别蓝车，20%错误将绿车识别为蓝车）。"",
+      ""第三步：计算后验概率P(蓝|指认蓝) = (0.8*0.15)/(0.8*0.15 + 0.2*0.85) ≈ 41.4%。"",
+      ""第四步：比较选项，41.4%远低于80%，故正确答案为B。"",
+      ""第五步：指出选项A的错误源于忽视基础比率，属于BASE_RATE_FALLACY。""
+    ],
+    ""final_explanation"": ""根据贝叶斯定理，肇事车实际为蓝色的概率约为41.4%，远低于80%。选项A错误地将目击者准确率直接等同于结论概率，忽视了基础比率（蓝车仅占15%）的影响，属于基础比率谬误。""
+  }
+}
+```","
+你是一个严谨的逻辑学家和认知科学家。请对以下'逻辑分析任务'中的文本进行分析。
+你的回答必须是一个能够被Python的json.loads()函数直接解析的、格式正确的JSON字符串。不要在JSON前后添加任何额外文本、解释或代码块标记。
+
+**JSON输出格式要求:**
+{
+  ""evaluation"": {
+    ""is_valid_reasoning"": ""布尔值(true/false)。对于逻辑题，代表结论是否必然由前提导出。对于认知偏差题（如琳达问题），代表常见的直觉回答是否符合逻辑/概率（false代表不符合，即存在谬误）。对于悖论，该值可为null。"",
+    ""confidence_score"": ""浮点数(0.0到1.0)，代表你对'is_valid_reasoning'判断的自信程度。"",
+    ""fallacy_type"": ""字符串，如果推理无效或存在认知偏差，请从下面的预定义列表中选择最恰当的谬误类型。如果有效，则为 'NO_FALLACY'。 ['NO_FALLACY', 'AFFIRMING_THE_CONSEQUENT', 'DENYING_THE_ANTECEDENT', 'QUANTIFIER_SCOPE_FALLACY', 'MODAL_FALLACY', 'COMPOSITION_FALLACY', 'DIVISION_FALLACY', 'CONJUNCTION_FALLACY', 'GAMBLER_S_FALLACY', 'BASE_RATE_FALLACY', 'PARADOX', 'UNCATEGORIZED']""
+  },
+  ""analysis"": {
+    ""reasoning_chain"": ""一个字符串列表，分步展示你的思考过程。例如：['第一步：识别前提...', '第二步：分析结构...', ...]。这是最重要的部分。"",
+    ""final_explanation"": ""字符串，用中文对你的最终判断给出一个清晰、完整的解释。""
+  }
+}
+
+--- 逻辑分析任务 ---
+背景：在一个城市，出租车由两家公司运营：85%是绿色的，15%是蓝色的。一天晚上，发生了一起出租车肇事逃逸事故。一位目击者指认肇事车辆是蓝色的。法庭测试了目击者在夜间识别颜色的能力，发现其准确率为80%。
+问题: 请问，肇事出租车实际上是蓝色的概率有多大？（A) 大约80% (B) 远低于80%。请选择并解释。
+"
